@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="amigatool" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/amigatool" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option external_deps="../amigadrive/libamigadrive.a;" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option parameters=" -p 1 -f ~/FS-UAE/Hard\ Drives/HD1536.hdf -o swap.fs " />
+				<Compiler>
+					<Add option="-std=c++0x" />
+					<Add option="-g" />
+					<Add directory="../amigadrive/include" />
+				</Compiler>
+				<Linker>
+					<Add library="../amigadrive/libamigadrive.a" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/amigatool" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option external_deps="../amigadrive/libamigadrive.a;" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="../amigadrive/include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="../amigadrive/libamigadrive.a" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="main.cpp" />
+		<Extensions>
+			<envvars />
+			<code_completion />
+			<lib_finder disable_auto="1" />
+			<debugger />
+			<DoxyBlocks>
+				<comment_style block="0" line="0" />
+				<doxyfile_project />
+				<doxyfile_build />
+				<doxyfile_warnings />
+				<doxyfile_output />
+				<doxyfile_dot />
+				<general />
+			</DoxyBlocks>
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
